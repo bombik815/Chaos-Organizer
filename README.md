@@ -5,3 +5,6 @@
 [Link to Chaos Organizer](https://bombik815.github.io/Chaos-Organizer/)
 
 [Серверная часть](https://github.com/bombik815/ahj-organizer-back.git)
+
+- Сохранение в истории ссылок и текстовых сообщений
+- Ссылки (то, что начинается с http:// или https://) должны быть кликабельны и отображаться как ссылки
