@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 800px) {
+    #organizer {
+        position: relative;
+        display: flex;
+        width: 99%;
+        height: 99%;
+        margin: auto;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 800px) {
+    #organizer {
+        position: relative;
+        display: flex;
+        width: 600px;
+        height: 800px;
+        margin: 20px auto auto auto;
+        flex-direction: column;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: aliceblue;
+ }
+ :-moz-placeholder {
+    color: aliceblue;
+ }
+ :-ms-input-placeholder {
+    color: aliceblue;
+ }
+
+ ::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 15px;
+    background-color: #252540;
+}
+
+ ::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 15px;
+    background-color: #555555;
+}
+
+body {
+    position: relative;
+    color: aliceblue;
+    background-color: #bcbcbc;
+}
+
+button {
+    background-color: white;
+}
+
+.organizer-records {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 7px;
+    height: inherit;
+    overflow: auto;
+    filter: drop-shadow(2px 3px 3px rgb(66, 66, 187));
+    background-color: #252540;
+    overflow-y: auto;
+}
+
+.for-scroll {
+    margin-top: auto;
+    width: 100%;
+}
+
+.organizer-input {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin-top: auto;
+    filter: drop-shadow(2px 3px 3px rgb(87, 87, 202));
+    background-color: #40406f;
+}
+
+.organizer-input-text {
+    margin: 5px;
+    padding-left: 3px;
+    padding-top: 3px;
+    width: 80%;
+    resize: none;
+    background-color: inherit;
+    border: none;
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+.organizer-input-text:focus {
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.organizer-input-buttons {
+    display: flex;
+}
+
+.input-btn {
+    margin: auto 3px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.input-btn:hover {
+    cursor: pointer;
+}
+
+.timer {
+    margin: auto;
+}
+
+.organizer-input-audio {
+    background-image: url(../image/audio.png);
+}
+
+
+.image-ok {
+    background-image: url(../image/ok.png);
+}
+
+.image-cancel {
+    background-image: url(../image/cancel.png);
+    background-size: auto;
+}
+
+
+.organizer-input-video {
+    background-image: url(../image/camera.png);
+}
+
+.organizer-input-enter {
+    background-position: left;
+    background-image: url(../image/send.png);
+}
+.organizer-input-image {
+    background-image: url(../image/img.png);
+}
+.organizer-input-file {
+    background-image: url(../image/file.png);
+}
+.organizer-input-geo {
+    background-image: url(../image/geo.png);
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    z-index: 1;
+    background-color: rgb(87, 87, 202);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+    height: 34%;
+}
+
+.modal-text {
+    padding: 10px;
+}
+
+.modal-title {
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.modale-input {
+    padding: 0px 10px 10px 10px;
+}
+
+.modal-input-title {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.modal-input-text {
+    width: 100%;
+    height: 25px;
+    padding-left: 3px;
+}
+
+.modal-input-text::placeholder {
+    color: #6363bd;
+    opacity: 0.7;
+}
+
+.modal-input-buttons {
+    display: flex;
+    position: relative;
+    margin-top: 7px;
+}
+
+.btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.notification {
+    position: absolute;
+    width: 240px;
+    height: 150px;
+    top: -20px;
+    left: 105px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.modal-cancel {
+    margin-left: auto;
+    margin-right: 7px;
+    width: 90px;
+}
+
+.modal-ok {
+    width: 50px;
+}
+
+.record {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    max-width: -webkit-fill-available;
+    width: fit-content;
+    margin: 4px 0 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #6363bd;
+}
+
+.record-pin {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 8%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    background-color: #6363bd;
+}
+
+.pin-close {
+    background-color: aliceblue;
+    background-image: url(../image/cancel.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px 20px 5px 5px;
+    align-self: flex-end;
+}
+
+.pin-close:hover {
+    cursor: pointer;
+}
+
+.pin-geo {
+    display: flex;
+}
+
+.pin-img {
+    background-image: url(../image/map5.png);
+    width: 32px;
+    height: 32px;
+    margin-left: 3px;
+    margin-right: 3px;
+    align-self: center;
+}
+
+.pin-text {
+    align-self: center;
+}
+
+.record-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.record-delete {
+    background-image: url(../image/del.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.record-delete:hover {
+    cursor: pointer;
+}
+
+.record-date {
+    margin-left: auto;
+}
+
+.record-text {
+    word-wrap: break-word;
+}
+
+.record-attach {
+    background-image: url(../image/pin12.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.record-attach:hover {
+    cursor: pointer;
+}
+
+.coordinates {
+    display: flex;
+}
+
+.input-error {
+    position: absolute;
+    padding: 6px;
+    top: -8px;
+    background-color: #40406f;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.drop-box {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+    background-color:#40406f;
+    filter: drop-shadow(2px 3px 3px rgb(37, 37, 129));
+}
+
+.dnd-label {
+    position: absolute;
+    color:#bcbcbc;
+    top: 40%;
+    left: 25%;
+    font-size: x-large;
+}
+
+.dnd-input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.image {
+    display: flex;
+}
+
+.reverse-image {
+    width: -webkit-fill-available;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.drop-img {
+    width: 300px;
+    height: 168px;
+    object-fit: contain;
+}
+
+.drop-video {
+    width: 400px;
+    height: 225px;
+}
+
+.pin-image {
+    width: 90px;
+    height: 50px;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.pin-video {
+    width: 100px;
+    height: 50px;
+}
+
+.drop-file {
+    display: flex;
+    justify-content: space-between;
+}
+
+.drop-file-name {
+    align-self: center;
+    margin: 15px;
+    word-break: break-all;
+}
+
+.drop-file-size {
+    align-self: center;
+    margin: 15px;
+    margin: 2px;
+    font-size: small;
+}
+
+.input-file-btn {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.input-file-btn:hover {
+    cursor: pointer;
+}
+
+.link-download {
+    align-self: flex-end;
+    margin: 2px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-color: aliceblue;
+    background-image: url(../image/download.png);
+}
+
+.link-download:hover {
+    cursor: pointer;
+}
+
+.map {
+    min-height: 230px;
+    width: 354px;
+    margin-left: auto;
+  }
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    max-width: -webkit-fill-available;
+    width: fit-content;
+    margin: 4px 0 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #6363bd;
+}
+
+.weather-info {
+    display: flex;
+}
+
+.weather-current {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather-text {
+    text-align: center;
+}
+
+.none {
+    display: none;
+}
