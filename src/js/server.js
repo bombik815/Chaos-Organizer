@@ -1,6 +1,6 @@
 export default class Server {
   constructor() {
-    this.url = 'https://ahj-organizer.herokuapp.com';
+    this.url = 'https://chaosorganizer.herokuapp.com';
     this.store = new Set();
   }
 
