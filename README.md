@@ -13,30 +13,30 @@
 
 - Сохранение в истории изображений, видео и аудио (как файлов) - через Drag & Drop и через иконку загрузки (скрепка в большинстве мессенджеров)
 
-![](./src/image_readme/dnd.png)
-![](./src/image_readme/upload.png)
+![](./src/image_readme/dnd.PNG)
+![](./src/image_readme/upload.PNG)
 
 - Скачивание файлов (на компьютер пользователя)
 
-![](./src/image_readme/download.png)
+![](./src/image_readme/download.PNG)
 
 - Ленивая подгрузка: сначала подгружаются последние 10 сообщений, при прокрутке вверх подгружаются следующие 10 и т.д.
 
-![](./src/image_readme/loadmess.png)
-![](./src/image_readme/loadmess13.png)
+![](./src/image_readme/loadmess.PNG)
+![](./src/image_readme/loadmess13.PNG)
 
 - Запись видео и аудио (используя API браузера)
 - Воспроизведение видео/аудио (используя API браузера)
 
-![](./src/image_readme/media.png)
+![](./src/image_readme/media.PNG)
 
 - Отправка геолокации с расположением на карте
 
-![](./src/image_readme/geo.png)
+![](./src/image_readme/geo.PNG)
 
 - Закрепление (pin) сообщений, закреплять можно только одно сообщение (прикрепляется к верхней части страницы)
 
-![](./src/image_readme/pinned.png)
+![](./src/image_readme/pinned.PNG)
 
 - Работа в оффлайн-режиме (при этом загруженные сообщения должны кэшироваться и быть доступными после обновления страницы)
 
@@ -44,4 +44,4 @@
 
 - Показывается погода по текущему месту нахождения по команде @bot
 
-![](./src/image_readme/weather.png)
+![](./src/image_readme/weather.PNG)
